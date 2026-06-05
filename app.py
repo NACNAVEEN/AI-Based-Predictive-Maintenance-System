@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import datetime
+import os
 
 
 # Set page configuration
@@ -41,10 +42,11 @@ st.markdown("Monitor machine health, predict potential hardware failures, and au
 
 # Sidebar Configuration
 st.sidebar.header("🔌 Connection Settings")
+default_api_url = os.environ.get("API_BASE_URL", "https://ai-based-predictive-maintenance-system.onrender.com")
 api_base_url = st.sidebar.text_input(
     "FastAPI API Base URL",
-    value="http://localhost:8000",
-    help="Enter your local URL (http://localhost:8000) or Azure URL (https://<app>.azurewebsites.net)"
+    value=default_api_url,
+    help="Enter your local URL (http://localhost:8000) or Render backend URL (https://<app>.onrender.com)"
 ).strip().rstrip("/")
 
 # Check API health

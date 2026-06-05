@@ -10,3 +10,15 @@ services:
       name: database-storage
       mountPath: /app/database
       sizeGB: 1
+
+  - type: web
+    name: predictive-maintenance-frontend
+    runtime: docker
+    plan: free
+    dockerfilePath: Dockerfile.frontend
+    envVars:
+      - key: PORT
+        value: 8501
+      - key: API_BASE_URL
+        value: https://ai-based-predictive-maintenance-system.onrender.com
+
