@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: predictive_maintenance_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    volumes:
+      # Mount the database directory to persist the SQLite database and logs on the host
+      - ./database:/app/database
+    restart: always

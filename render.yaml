@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: predictive-maintenance-api
+    runtime: docker
+    plan: starter # Starter plan is required to use persistent disks
+    envVars:
+      - key: PORT
+        value: 8000
+    disk:
+      name: database-storage
+      mountPath: /app/database
+      sizeGB: 1
