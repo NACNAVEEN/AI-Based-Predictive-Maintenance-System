@@ -42,7 +42,7 @@ st.markdown("Monitor machine health, predict potential hardware failures, and au
 
 # Sidebar Configuration
 st.sidebar.header("🔌 Connection Settings")
-default_api_url = os.environ.get("API_BASE_URL", "https://ai-based-predictive-maintenance-system.onrender.com")
+default_api_url = os.environ.get("API_BASE_URL", "https://ai-based-predictive-maintenance-system-1.onrender.com")
 api_base_url = st.sidebar.text_input(
     "FastAPI API Base URL",
     value=default_api_url,

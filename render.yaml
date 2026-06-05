@@ -20,5 +20,5 @@ services:
       - key: PORT
         value: 8501
       - key: API_BASE_URL
-        value: https://ai-based-predictive-maintenance-system.onrender.com
+        value: https://ai-based-predictive-maintenance-system-1.onrender.com
 
