@@ -2,6 +2,9 @@
 
 An end-to-end Machine Learning and IoT analytics application designed to predict machinery failure using manufacturing telemetry. The system features a FastAPI backend, SQLite prediction logging, an interactive Streamlit diagnostic control center, and Power BI visualization capabilities.
 
+Live deployed url:
+https://ai-based-predictive-maintenance-system-2.onrender.com/
+
 ---
 
 ## 🏛️ System Architecture
